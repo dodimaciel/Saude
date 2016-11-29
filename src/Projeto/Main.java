@@ -24,7 +24,7 @@ public class Main {
 
             switch (opcao) {
                 case 1: {
-
+                    Doadores doadores = new Doadores();
                     int op = 0;
                     do {
                         System.out.println(" 1 - Adicionar Doador ");
@@ -32,8 +32,6 @@ public class Main {
                         System.out.println(" 3 - Exibir Doador ");
                         System.out.println(" 4 - Anterior");
                         op = tc.nextInt();
-
-                        Doadores doadores = new Doadores();
 
                         switch (op) {
                             case 1:
@@ -56,7 +54,7 @@ public class Main {
                                 }
                                 break;
                             case 3:
-                                doadores.exibir();
+                                doadores.exibir(listDoador);
                                 break;
                             default:
                                 break;

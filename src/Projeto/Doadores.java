@@ -1,5 +1,7 @@
 package Projeto;
 
+import Fila.Doador;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,13 +27,15 @@ public class Doadores extends Pessoa {
         System.out.println(" - - - - - - - - - - - - - - - -");
     }
 
-    public void exibir() {
-        System.out.println(" - - - - - - - - - - - - - - - -");
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Idade: " + this.idade);
-        System.out.println("Tipo Sanguíneo: " + this.tiposangue);
-        System.out.println("Orgão que pode Doar: " + this.orgaodoar);
-        System.out.println(" - - - - - - - - - - - - - - - -");
+    public void exibir(ArrayList listDoador) {
+        for (int i = 0; i < listDoador.size(); i++) {
+                System.out.println(" - - - - - - - - - - - - - - - -");
+                System.out.println("Nome: " + this.nome);
+                System.out.println("Idade: " +listDoador.get(i));
+                System.out.println("Tipo Sanguíneo: " + listDoador.get(i));
+                System.out.println("Orgão que pode Doar: " + listDoador.get(i));
+                System.out.println(" - - - - - - - - - - - - - - - -");
+        }
     }
 
     public void remover() {
