@@ -1,5 +1,6 @@
 package Projeto;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,7 @@ import java.util.Scanner;
  */
 public class Doadores extends Pessoa {
     Scanner tc = new Scanner(System.in);
+    ArrayList<Doadores> listDoador = new ArrayList<>();
 
     public String orgaodoar;
 
@@ -31,4 +33,21 @@ public class Doadores extends Pessoa {
         System.out.println("Orgão que pode Doar: " + this.orgaodoar);
         System.out.println(" - - - - - - - - - - - - - - - -");
     }
+
+    public void remover() {
+        String rmv;
+
+        System.out.println("Digite o nome do Doador que deseja remover: ");
+        rmv = tc.next();
+
+        for (int i = 0; i < listDoador.size(); i++) {
+            if(listDoador.get(i).nome.equals(rmv)) {
+                listDoador.remove(i);
+            } else {
+                System.out.println("Doador não encontrado.");
+            }
+        }
+    }
+
+
 }

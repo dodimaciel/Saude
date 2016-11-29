@@ -1,9 +1,13 @@
 package Fila;
 
+import Projeto.Doadores;
+
 /**
  * Created by Douglas on 28/11/2016.
  */
 public class Doador {
+    Doadores anterior;
+    Doadores proximo;
     int inicio;
     int fim;
     int tamanho;
