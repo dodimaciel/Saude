@@ -26,7 +26,7 @@ public class Main {
                 case 1: {
                     Doadores doadores = new Doadores();
                     int op = 0;
-                    do {
+
                         System.out.println(" 1 - Adicionar Doador ");
                         System.out.println(" 2 - Remover Doador ");
                         System.out.println(" 3 - Exibir Doador ");
@@ -54,12 +54,11 @@ public class Main {
                                 }
                                 break;
                             case 3:
-                                doadores.exibir(listDoador);
+                                doadores.exibir();
                                 break;
                             default:
                                 break;
                         }
-                    } while (op != 4);
                 }
             }
         } while (opcao != 0);

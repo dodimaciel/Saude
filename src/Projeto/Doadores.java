@@ -12,6 +12,14 @@ public class Doadores extends Pessoa {
     Scanner tc = new Scanner(System.in);
     ArrayList<Doadores> listDoador = new ArrayList<>();
 
+    public String getOrgaodoar() {
+        return orgaodoar;
+    }
+
+    public void setOrgaodoar(String orgaodoar) {
+        this.orgaodoar = orgaodoar;
+    }
+
     public String orgaodoar;
 
     public void ler() {
@@ -27,15 +35,16 @@ public class Doadores extends Pessoa {
         System.out.println(" - - - - - - - - - - - - - - - -");
     }
 
-    public void exibir(ArrayList listDoador) {
+    public void exibir() {
         for (int i = 0; i < listDoador.size(); i++) {
                 System.out.println(" - - - - - - - - - - - - - - - -");
-                System.out.println("Nome: " + this.nome);
-                System.out.println("Idade: " +listDoador.get(i));
-                System.out.println("Tipo Sanguíneo: " + listDoador.get(i));
-                System.out.println("Orgão que pode Doar: " + listDoador.get(i));
+                System.out.println("Nome: " + listDoador.get(i).getNome());
+                System.out.println("Idade: " +listDoador.get(i).getIdade());
+                System.out.println("Tipo Sanguíneo: " + listDoador.get(i).getTiposangue());
+                System.out.println("Orgão que pode Doar: " + listDoador.get(i).getOrgaodoar());
                 System.out.println(" - - - - - - - - - - - - - - - -");
         }
+
     }
 
     public void remover() {
